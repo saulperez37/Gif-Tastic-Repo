@@ -3,7 +3,7 @@ $(document).ready(function () {
     //GIFY endpoint -->
     //https://api.giphy.com/v1/gifs/search?api_key=5LUQ4rstm0r46r5SCZgc99E9VXdIFIMo&q=football&limit=10&offset=0&rating=G&lang=en
 
-    var sports = ["soccer", "football", "baseball", "hockey", "boxing", "golf", "tennis", "basketball"];
+    let sports = ["soccer", "football", "baseball", "hockey", "boxing", "golf", "tennis", "basketball"];
 
     function displayGif() {
 
@@ -22,13 +22,14 @@ $(document).ready(function () {
             for (let i = 0; i < results.length; i++) {
 
                 let gifDiv = $("<div>");
+                gifDiv.addClass("gifdiv");
 
                 let pRating = $("<p>");
                 pRating.text("Rating: " + results[i].rating);
 
                 let sportImage = $("<img>");
-                sportImage.attr("src", results[i].images.fixed_height.url);
-                
+                sportImage.addClass("sportgif");
+                sportImage.attr("src", results[i].images.fixed_height_still.url);
                 gifDiv.append(pRating);
                 gifDiv.append(sportImage);
 
@@ -36,6 +37,20 @@ $(document).ready(function () {
             }
         });
     }
+
+    $(".sportgif").on("click", function() {
+
+        let src = $(this).attr(sportImage);
+        if($(this).hasClass('playing')) {
+            $(this).attr(sportImage, src.replace(/\.gif/i, "_s.gif"))
+            $(this).removeClass('playing');
+        }
+        else {
+            $(this).addClass('playing');
+            $(this).attr(sportImage, src.replace(/\_s.gif/i, ".gif"))
+        }
+
+    });
 
     function displayButtons() {
 
@@ -59,6 +74,6 @@ $(document).ready(function () {
     });
 
     $(document).on("click", ".sport", displayGif);
-
     displayButtons();
+
 })

@@ -9,6 +9,9 @@
 
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One&display=swap" rel="stylesheet">
 
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script src="./assets/javascript/api.js"></script>
@@ -18,21 +21,32 @@
 <body>
 
     <div class="container">
-        <h1>GIF Search</h1>
 
-        <!-- Rendered buttons will get dumped here  -->
-        <div id="buttons-view"></div>
+        <div class="row">
+            <div class="col-sm-6">
+                <h1 class="title">Sports GIF Search</h1>
+            </div>
+            <div class="col-sm-6 d-flex align-items-end flex-column mt-2">
+                <form id="gif-form" class="submit-bar">
+                    <label for="gif-input"></label>
+                    <input type="text" id="gif-input" placeholder="Add a sports topic...">
+                    <input id="add-gif" type="submit" value="Search">
+                </form>
+            </div>
+        </div>
 
-        <form id="gif-form">
-            <label for="gif-input">Add A Sport</label>
-            <input type="text" id="gif-input"><br>
+        <div class="row">
+            <div class="col-sm-12">
+                <div id="buttons-view"></div>
+            </div>
+        </div>
 
-            <!-- Button triggers new movie to be added -->
-            <input id="add-gif" type="submit" value="Search">
-        </form>
+        <div class="row">
+            <div class="col-sm-12 d-flex flex-wrap" id="gifs-view">
 
-        <!-- Gifs will get dumped Here -->
-        <div id="gifs-view"></div>
+            </div>
+        </div>
+    </div>
 
 </body>
 

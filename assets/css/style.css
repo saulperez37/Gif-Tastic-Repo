@@ -1,0 +1,27 @@
+body {
+    background-color: lightgray;
+}
+
+.container {
+    margin: 15px auto;
+    padding: 15px;
+    background-color:#8f8f8f;
+}
+
+.gifdiv {
+ margin: 10px 20px 5px 20px;
+}
+
+.sport {
+    margin: 10px 5px;
+}
+
+#buttons-view {
+    border-top: #9e9e9e solid 2px;
+    border-bottom: #9e9e9e solid 2px;
+}
+
+.title {
+    font-family: 'Alfa Slab One', cursive;
+    font-style: italic;
+}
