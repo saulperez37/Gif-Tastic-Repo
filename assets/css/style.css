@@ -9,7 +9,7 @@ body {
 }
 
 .gifdiv {
- margin: 10px 20px 5px 20px;
+ margin: 10px 15px 10px 15px;
 }
 
 .sport {
@@ -27,12 +27,11 @@ body {
 .title {
     font-family: 'Alfa Slab One', cursive;
     font-style: italic;
-    margin-left: 18px;
+    margin-left: 75px;
 }
 
 p {
     margin: auto;
-    /* margin-bottom: 5px; */
     background-color: lightgray;
     padding: 5px;
     font-family: monospace;
@@ -40,6 +39,11 @@ p {
 }
 
 #gif-form {
-    margin-right: 18px;
+    margin-right: 90px;
     font-family: monospace;
+    margin-bottom: 10px;
+}
+
+#gifs-view {
+    padding-left: 75px;
 }
