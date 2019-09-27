@@ -14,14 +14,32 @@ body {
 
 .sport {
     margin: 10px 5px;
+    font-family: monospace;
+    
 }
 
 #buttons-view {
     border-top: #9e9e9e solid 2px;
     border-bottom: #9e9e9e solid 2px;
+    margin-bottom: 10px;
 }
 
 .title {
     font-family: 'Alfa Slab One', cursive;
     font-style: italic;
+    margin-left: 18px;
+}
+
+p {
+    margin: auto;
+    /* margin-bottom: 5px; */
+    background-color: lightgray;
+    padding: 5px;
+    font-family: monospace;
+    font-weight: bold;
+}
+
+#gif-form {
+    margin-right: 18px;
+    font-family: monospace;
 }

@@ -32,7 +32,7 @@ $(document).ready(function () {
                 sportImage.attr("data-still", results[i].images.fixed_height_still.url);
                 sportImage.attr("data-animate", results[i].images.fixed_height.url);
                 sportImage.attr("data-state", "still");
-                sportImage.addClass("sport-gif")
+                sportImage.addClass("sport-gif");
                 gifDiv.append(pRating);
                 gifDiv.append(sportImage);
 
@@ -41,24 +41,22 @@ $(document).ready(function () {
         });
     }
 
-    $(".sport-gif").on("click", function () {
 
-        let state = S(this).attr("data-state");
-        console.log(state);
+    $(document).on("click", ".sport-gif", function () {
 
+        let state = $(this).attr("data-state");
+        // console.log(state);
 
         if (state === "still") {
             $(this).attr("src", $(this).attr("data-animate"));
             $(this).attr("data-state", "animate");
-            
-
         }
         else {
             $(this).attr("src", $(this).attr("data-still"));
             $(this).attr("data-state", "still");
         }
     });
-    
+
 
     function displayButtons() {
 
